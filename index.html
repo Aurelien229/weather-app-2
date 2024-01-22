@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="module" src="script.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>                          
+    <script src="https://kit.fontawesome.com/b377cfc8f3.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap" rel="stylesheet">
+    <title>weather app</title>
+</head>
+
+<body>
+    <header>
+        <img class="logo" src="assets/wolf.svg" alt="logo">
+        <h1>Wolf weather</h1>
+    </header>
+    <form>
+        <section class="form_container">
+            <form id="weatherForm">
+                <label for="inputCity">Selectionner une ville:</label><br>
+                <input list="metropolis" type="text" class="form_control" id="inputCity">
+                <datalist id="metropolis">
+                    <option value="Anvers"></option>
+                    <option value="Arlon"></option>
+                    <option value="Bastogne"></option>
+                    <option value="Bruxelles"></option>
+                    <option value="Charleroi"></option>
+                    <option value="Chimay"></option>
+                    <option value="Gent"></option>
+                    <option value="Hasselt"></option>
+                    <option value="Liege"></option>
+                    <option value="Malmedy"></option>
+                    <option value="Mons"></option>
+                    <option value="Namur"></option>
+                    <option value="Ostende"></option>
+                    <option value="Turnhout"></option>
+                </datalist>
+                <button type="submit" class="form_btn">Rechercher</button>
+            </form>
+        </section>
+        <div class="city_container">
+            <div id="ville"></div>
+        </div>
+        <section class="info_container">
+        </section>
+    </form>
+    <div id="temperatureChartContainer">
+        <canvas id="temperatureChart"></canvas>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,235 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+header {
+  display: flex;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  gap: 50px;
+}
+@media (max-width: 475px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+.logo {
+  height: 150px;
+  width: 150px;
+  color: rgb(3, 23, 41);
+}
+
+h1 {
+  font-family: "Dancing Script", cursive;
+  font-size: 800%;
+  color: rgb(3, 23, 41);
+  text-shadow: 5px 5px 6px rgb(255, 255, 255);
+}
+
+@media (max-width: 475px) {
+  form {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.form_container {
+  color: rgb(3, 23, 41);
+  text-align: center;
+  padding-top: 10px;
+  max-width: 300px;
+  background-color: rgb(144, 166, 199);
+  font-family: "Dancing Script", cursive;
+  font-size: 200%;
+  border-radius: 15px;
+}
+@media (max-width: 475px) {
+  .form_container {
+    justify-content: center;
+  }
+}
+
+.form_btn {
+  font-family: "Dancing Script", cursive;
+  color: rgb(3, 23, 41);
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 10em;
+  position: relative;
+  height: 3.5em;
+  border: 3px ridge #149CEA;
+  outline: none;
+  background-color: transparent;
+  transition: 1s;
+  border-radius: 0.3em;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.form_btn::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 3%;
+  width: 95%;
+  height: 40%;
+  background-color: rgb(144, 166, 199);
+  transition: 0.5s;
+  transform-origin: center;
+}
+
+.form_btn::before {
+  content: "";
+  transform-origin: center;
+  position: absolute;
+  top: 80%;
+  left: 3%;
+  width: 95%;
+  height: 40%;
+  background-color: rgb(144, 166, 199);
+  transition: 0.5s;
+}
+
+.form_btn:hover::before,
+.form_btn:hover::after {
+  transform: scale(0);
+}
+
+.form_btn:hover {
+  box-shadow: inset 0px 0px 25px #1479EA;
+}
+
+body {
+  margin-left: 50px;
+  margin-right: 50px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+}
+@media (max-width: 475px) {
+  body {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+.city_container {
+  display: flex;
+  justify-content: center;
+}
+
+#ville {
+  border: 2px solid rgb(144, 166, 199);
+  border-radius: 15px;
+  max-width: 800px;
+  min-width: 800px;
+  margin-bottom: 50px;
+  margin-top: 50px;
+  background-size: cover;
+}
+@media (max-width: 475px) {
+  #ville {
+    max-width: 450px;
+    min-width: 450px;
+  }
+}
+
+h2 {
+  font-family: "Dancing Script", cursive;
+  font-size: 600%;
+  color: rgb(3, 23, 41);
+  text-shadow: 5px 5px 6px #ffffff;
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.info_container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  gap: 50px;
+}
+
+.box {
+  font-family: "Dancing Script", cursive;
+  width: 200px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  color: rgb(3, 23, 41);
+  background-color: rgba(144, 166, 199, 0.85);
+  margin-bottom: 5px;
+}
+
+#temperatureChart {
+  max-width: 800px;
+  max-height: 400px;
+  border: 2px solid #000000;
+  border-radius: 5px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-color: rgba(144, 166, 199, 0.85);
+}
+@media (max-width: 475px) {
+  #temperatureChart {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}/*# sourceMappingURL=style.css.map */
