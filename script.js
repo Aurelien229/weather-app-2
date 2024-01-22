@@ -3,7 +3,7 @@ import { createTemperatureChart } from './graphic.js';
 // Importer la fonction getCityPhoto depuis le fichier unsplash.js
 import { getCityPhoto } from './unsplash.js'; // Assurez-vous de spécifier le chemin correct
 
-import './style.css';
+
 
 // Clé API OpenWeatherMap
 const apiKey = "e712e2a639cd686c277fc5416e3d6590";
